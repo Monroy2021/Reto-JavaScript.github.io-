@@ -3,6 +3,7 @@
     document.getElementById('txtNombre').focus();
 })();
 
+//declaracion de variables a su alcance 
 
 let index = 0;
 let correctas = [];
@@ -21,7 +22,7 @@ function validarNombre() {
         bienvenida(nombre);
     }
 }
-
+// asignacion por nombres  por localizador (index.html)
 function bienvenida(nombre) {
 
     mostrarDiv('categoria');
@@ -207,7 +208,7 @@ function iniciarTimer() {
 
 
 }
-
+// En esta funcion  es donde se genera la rspuesta incorrecta clicleada por el participante. 
 function checkRpta(rpta) {
 
     document.getElementById('divrpta').style.display = 'block';
@@ -229,13 +230,16 @@ function checkRpta(rpta) {
 function verResultados() {
     mostrarDiv('resultados');
     let template = '';
-    let tempEstado = '';
-    //preguntas=["1)-","2)-","3)-"] --> (i)
+    let tempEstado = ''; 
+
+    //preguntas=["1)-","2)-","3)-"] --> (i) 
+
     for (let i = 0; i < preguntas.length; i++) {
         template += '<p>';
 
         let estado = 'INCORRECTO';
-        let classEstado = 'incorrecto';
+        let classEstado = 'incorrecto'; 
+
         //correctas=[1,2] -->indice de preguntas(x)
         for (let x of correctas) {
             if (x === i) {
