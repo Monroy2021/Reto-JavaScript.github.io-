@@ -36,7 +36,8 @@ function bienvenida(nombre) {
     document.getElementById('deportes').innerHTML = "DEPORTES";
 
 }
-
+// Creamos la funcion  donde cargamos las preguntar mediante la declaracion de variable let (titulo)
+// generamos un if donde vamos a comparar segun la cateira con sus respectivas preguntas y respuesta.
 function cargarPreguntasTipo(tipo) {
 
     let titulo = '';
@@ -171,6 +172,8 @@ function siguiente() {
 
 }
 
+
+
 function cargarPreguntas(indice) {
 
     document.getElementById('pregunta').innerHTML = preguntas[indice];
@@ -276,7 +279,7 @@ function deshabilitarRadios(radios) {
     }
 }
 
-function reiniciar() {
+function reiniciar() { 
     index = 0;
     correctas = [];
     preguntas = [];
